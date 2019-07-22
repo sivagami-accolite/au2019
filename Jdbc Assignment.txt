@@ -1,0 +1,14 @@
+1)
+create a table of 10-15 records.
+id,age,name
+Have 3 hashmaps 
+
+1-->insert  <id, Object> insert 5 records
+2-->update  <id,name>  update old 5 records to new one
+3-->delete  <id,age> delete 3 records 
+
+Use all via batch, using prepared statement
+
+2)For an existing database,try any functions to read the structural info the tables of the metadata
+
+3)Insert query and Update query via ResultSet
