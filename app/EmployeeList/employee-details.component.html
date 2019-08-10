@@ -1,0 +1,18 @@
+<div *ngIf="Address">
+    
+    <h2>Address</h2>
+    <table>
+        <tr>
+            <td>Street:</td><td>{{Address.Street}}</td>
+        </tr>
+        <tr>
+            <td>State:</td>
+            <td>{{Address.State}}</td>
+        </tr>
+        <tr>
+            <td>Pincode:</td>
+            <td>{{Address.Pincode}}</td>
+        </tr>
+    </table>
+    <a [routerLink]="['/employees']">Back</a>
+</div>

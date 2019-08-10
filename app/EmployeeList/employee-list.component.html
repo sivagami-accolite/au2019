@@ -1,0 +1,28 @@
+<div><h2>{{pageTitle}}</h2></div>
+     <div>
+         <table *ngIf='employees' border="1" style="border:solid 1px black">
+             <thead>
+                 <tr style="border:solid 1px black">
+                     <td>ID</td>
+                     <td>Name</td>
+                     <td>Department</td>
+                 </tr>
+             </thead>
+             <tr *ngFor='let employee of employees' style="border:solid 1px black">
+                 <td><label>{{employee.EmployeeId}}</label></td>
+                 <td><label>{{employee.Name}}</label></td>
+                 <td><label>{{employee.Department}}</label></td>
+                 <td><a [routerLink]="['/employee',employee.EmployeeId]">Details</a></td>
+                 <td><button (click)="DeleteEmployee(employee)">Delete</button></td>
+                 <td><a [routerLink]="['/edit',employee.EmployeeId]">Edit</a> </td>
+             </tr>
+             <tr *ngIf='addEmployee' style="border:solid 1px black">
+                 <td><input type="text" [(ngModel)]="EmployeeId" /></td>
+                 <td><input type="text" [(ngModel)]="Name" /></td>
+                 <td><input type="text" [(ngModel)]="Department"/></td>
+                 <td><input type="button" (click)="SaveData()" value="Save"/></td>
+                 <td><input type="button" (click)="Cancel()" value="Cancel" /></td>
+             </tr>
+         </table>
+         <input (click)="AddEmployee()" type="button" value="Add" />
+</div>
