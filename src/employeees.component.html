@@ -1,0 +1,13 @@
+<h2>Employee Name List</h2>
+
+<ul class="employees">
+    <li *ngFor="let employe of employees" (click)="onSelect(employe)"
+        [class.selected]="employee === selectedemploye">
+        <span class="badge">{{employe.id}}</span>
+        <span>{{employee.name}}</span>
+        <button class="delete"
+                (click)="delete(employee); $event.stopPropagation()">x
+        </button>
+    </li>
+</ul>
+
